@@ -8,9 +8,9 @@
 build_it() {
 REPO_DIR=""
 FORCEUPDATE="yes"
-PROJECT=$1
-VERSION="4.7"
-GIT_BRANCH="dev"
+PROJECT="$1"
+VERSION="$2"
+GIT_BRANCH="$3"
 EMUELEC_ADDON_VERSION=$VERSION
 
 [ -z "$SCRIPT_DIR" ] && SCRIPT_DIR=$(pwd)
@@ -1186,4 +1186,4 @@ cat "${SCRIPT_DIR}/emuelec-kodi_$(date +%Y%m%d_%H%M%S).log"
 } 
 
 #build_it Amlogic
-build_it Amlogic-ce
+build_it Amlogic-ce 4.7 dev
