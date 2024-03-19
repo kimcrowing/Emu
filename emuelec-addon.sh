@@ -17,7 +17,7 @@ EMUELEC_ADDON_VERSION=$VERSION
 
 # make sure you change these lines to point to your EmuELEC git clone
 EMUELEC="${SCRIPT_DIR}"
-[ -z "$GIT_BRANCH" ] && GIT_BRANCH="dev"
+[ -z "$GIT_BRANCH" ] && GIT_BRANCH="dev_1.3"
 SX05RE_PATH="packages/sx05re"
 EMUELEC_PATH="${SX05RE_PATH}/emuelec"
 [ -z "$EMUELEC_ADDON_VERSION" ] && EMUELEC_ADDON_VERSION="3.6"
@@ -37,7 +37,7 @@ if [ -d "$EMUELEC" ] ; then
 fi 
 
 [ -z "$DISTRO" ] && DISTRO=EmuELEC
-[ -z "$PROJECT" ] && PROJECT=Amlogic-ce
+[ -z "$PROJECT" ] && PROJECT=Amlogic-ng
 [ -z "$ARCH" ] && ARCH=aarch64
 [ -z "$PROVIDER" ] && PROVIDER="EmuELEC"
 [ -z "$VERSION" ] && VERSION=$(cat $SCRIPT_DIR/distributions/$DISTRO/version | grep LIBREELEC_VERSION | grep -oP '"\K[^"\047]+(?=["\047])')
@@ -79,7 +79,7 @@ PACKAGES_Sx05RE="$PKG_EMUS \
 				vlc \
 				freetype \
 				es-theme-ComicBook \
-				bash \
+			bash \
 				SDL_GameControllerDB \
 				libvorbisidec \
 				jslisten \
@@ -111,7 +111,7 @@ if [ -n "$DISABLED_CORES" ] ; then
 fi
 
 # Add packages for S922x
-if [ "$PROJECT" == "Amlogic-ce" ]; then
+if [ "$PROJECT" == "Amlogic-ng" ]; then
 PACKAGES_ALL+=" $LIBRETRO_S922X_CORES mame2016"
 fi
 
@@ -1186,4 +1186,4 @@ cat "${SCRIPT_DIR}/emuelec-kodi_$(date +%Y%m%d_%H%M%S).log"
 } 
 
 #build_it Amlogic
-build_it Amlogic-ce 4.7 dev
+build_it Amlogic-ng 4.3 dev_4.3
