@@ -173,7 +173,7 @@ if [ -d "$EMUELEC" ] ; then
 			echo "(ok)"
   			rm -rf ./sources/${package}-${PKG_VERSION}
        			if [ $? -eq 0 ]; then
-  				echo "Deleted $package successfully" &>>"$LOG"
+  				echo "wwwDeleted $package successfully" &>>"$LOG"
 			else
 				echo "Failed to delete $PKG_FOLDER" &>>"$LOG"
 				exit 1
