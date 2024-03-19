@@ -1186,4 +1186,4 @@ cat "${SCRIPT_DIR}/emuelec-kodi_$(date +%Y%m%d_%H%M%S).log"
 } 
 
 #build_it Amlogic
-build_it Amlogic-ce 4.3 dev_4.3
+build_it Amlogic-ce 4.7 dev
