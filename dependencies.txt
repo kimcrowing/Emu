@@ -4,6 +4,5 @@ cmake fonts-droid-fallback libvlc-dev libvlccore-dev vlc-bin texinfo premake4 go
 tzdata xfonts-utils lzop
 libxml-parser-perl
 libparse-yapp-perl
-gperf
+gperf libjson-perl libncurses5-dev zip zstd
 patchutils meson
-gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
